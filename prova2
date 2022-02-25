@@ -1,0 +1,48 @@
+import java.util.*;
+
+public class prova2
+
+{
+    public static void main(String[] args)
+
+    {
+
+        Scanner scan = new Scanner(System.in);
+
+        String nome[] = new String[2];
+        String cognome[] = new String[2];
+        String nomeDaCancellare;
+
+        List listaNomi = new ArrayList();
+
+        List listaCognomi = new ArrayList();
+
+        for (int i = 0; i < 2; i++) {
+
+            System.out.println("Inserisci nome:");
+
+            nome[i] = scan.nextLine();
+
+            listaNomi.add(nome[i]);
+
+            System.out.println("Inserisci cognome:");
+
+            cognome[i] = scan.nextLine();
+
+            listaCognomi.add(cognome[i]);
+
+        }
+        System.out.println("La lista inserita Nomi e' :" + listaNomi + " ");
+        System.out.println("La lista inserita cognomi e' :" + listaCognomi + " ");
+
+        System.out.println("Vuoi eliminare qualche nome ? ");
+        boolean bn = scan.nextBoolean();
+        if (bn == true) {
+            System.out.println("Inserisci il nome da eleminare");
+
+            nomeDaCancellare = scan.nextLine();
+
+        } else
+            System.out.println("Arrivederci!");
+    }
+}
